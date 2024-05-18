@@ -1,8 +1,8 @@
-def sort_dict(input_dict):
+def sort_dict_by_key(input_dict):
     keys = list(input_dict.keys())
 
     for i in range(len(keys)):
-        for j in range(0, n - i - 1):
+        for j in range(0, len(keys) - i - 1):
             if keys[j] > keys[j + 1]:
                 keys[j], keys[j + 1] = keys[j + 1], keys[j]
 
@@ -13,7 +13,7 @@ def sort_dict(input_dict):
 
 def main():
     myDict = {"n": 4, "p": 3}
-    sorted_dict = sort_dict(myDict)
+    sorted_dict = sort_dict_by_key(myDict)
     print(sorted_dict)
 
 
