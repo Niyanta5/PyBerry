@@ -1,4 +1,4 @@
-def binary_search(arr, target):
+def binarySearch(arr, target):
     left = 0
     right = len(arr) - 1
 
@@ -7,14 +7,22 @@ def binary_search(arr, target):
 
         if arr[mid] == target:
             return mid
+
         elif arr[mid] < target:
             left = mid + 1
-        else:
-            right = mid - 1
+
+        elif arr[mid] > target:
+            left = mid - 1
 
     return -1
 
 
-sorted_array = [2, 5, 7, 12, 18, 20, 27]
-target = 12
-print(binary_search(sorted_array, target))
+def main():
+    sortedarray = [1, 3, 5, 7, 9, 12]
+    result = binarySearch(sortedarray, 9)
+    print(result)
+
+
+if __name__ == "__main__":
+    main()
+
